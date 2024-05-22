@@ -21,11 +21,11 @@ const promotionCode = "SALE50";
 // เริ่มเขียนโค้ดตรงนี้
 
 function calculateTotalPrice(products, promotionCode) {
-  let value = [];
+  let totalPrice = 0;
   for (let i = 0; i < products.length; i++) {
-    value.push(products[i].price * products[i].quantity);
+    value = products[i].price * products[i].quantity;
+    totalPrice += value;
   }
-  let totalPrice = value[0] + value[1] + value[2];
 
   if (promotionCode == "SALE20") {
     promotionCode = 0.2;
